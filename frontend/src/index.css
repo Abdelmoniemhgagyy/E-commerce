@@ -1,0 +1,45 @@
+ 
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+ 
+  *{
+    font-family: 'Open Sans', sans-serif;
+  }
+  .b{
+    border:1px solid red;
+  }
+
+  .my-button{
+    border: 1px solid #8f8e8e !important; 
+    padding: 10px 20px !important; 
+    text-align: center !important; 
+    cursor: pointer !important; 
+    border-radius: 5px !important;
+  }
+
+/* scroll bar  */
+::-webkit-scrollbar{
+  width: 10px;
+  background-color:#fff ;
+
+}
+::-webkit-scrollbar-thumb{
+  background-color: #8f8e8e;
+  width: 5px;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: #adacac;
+
+}
+
+
+
+
+  @media(max-width:560px){
+
+   .my-button{
+        font-size: 12px!important;
+         padding: 7px 10px !important; 
+
+      }
+ }
