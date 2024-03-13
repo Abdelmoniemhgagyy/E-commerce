@@ -45,6 +45,9 @@ function Main() {
   };
   
 
+  if (data) {
+    console.log(data);
+  }
 
   if (data) {
     return (
