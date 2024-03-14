@@ -36,7 +36,7 @@ function ReactSwiper() {
                             <SwiperSlide key={index}>
                             <img src={slide.imgSrc} alt="" />
                             <Box sx={{position:"absolute",left:"10%",top:{xs:"10%",sm:"30%"},
-                                      textAlign:{xs:"center",sm:"left"}
+                                      textAlign:"left"
                                      }}>
                                     <Typography
                                     sx={{
@@ -79,6 +79,7 @@ function ReactSwiper() {
                                     color: "white",
                                     fontWeight: 400,
                                     my: 1,
+                                    // @ts-ignore
                                     backgroundColor: theme.palette.secondary.main,
                                     width: "fit-content",
                                     px:"2px"

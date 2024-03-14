@@ -33,21 +33,22 @@ function SectionIcons() {
       <Stack direction={"row"} alignItems={"center"} justifyContent={"center"}  flexWrap={"wrap"} gap={1}>
         {myBox.map((box,index)=>(
           <Paper  key={index} sx={{p:1,width:"282px",
-                                 display:"flex",gap:2,
-                                 alignItems:"center",
-                                 justifyContent:"center",
-                                 textAlign:"center",
-                                 bgcolor:theme.palette.mode ==="dark"?"#000":"#fff"
-                                  }}>
-           {box.icon}
-            <Box textAlign={"center"}>
-            <Typography variant="h6" sx={{fontSize:"16px",fontWeight:400}}>
-            {box.title}
-           </Typography>
-            <Typography variant="h6" sx={{fontSize:"13px",color:"#777"}}>
-            {box.subTitle}
-           </Typography>
-            </Box>
+                  display:"flex",gap:2,
+                  alignItems:"center",
+                  justifyContent:"center",
+                  textAlign:"center",
+                  // @ts-ignore
+                  bgcolor:theme.palette.mode ==="dark"?"#000":"#fff"
+                   }}>
+                  {box.icon}
+                    <Box textAlign={"center"}>
+                    <Typography variant="h6" sx={{fontSize:"16px",fontWeight:400}}>
+                    {box.title}
+                  </Typography>
+                    <Typography variant="h6" sx={{fontSize:"13px",color:"#777"}}>
+                    {box.subTitle}
+                  </Typography>
+                    </Box>
            </Paper>
         ))}
       </Stack>

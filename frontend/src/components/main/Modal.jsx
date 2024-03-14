@@ -15,7 +15,7 @@ import { useState } from "react";
 // eslint-disable-next-line react/prop-types
 function Modal({ open, handleClose, item }) {
   const [indexImg, setIndexImg] = useState(0);
-  const [alignment, setAlignment] = useState("left");
+  const [, setAlignment] = useState("left");
 
   const handleAlignment = (event, newAlignment) => {
     setAlignment(newAlignment);
@@ -108,21 +108,25 @@ function Modal({ open, handleClose, item }) {
                   exclusive
                   onChange={handleAlignment}
                   aria-label="text alignment"
-                  sx={{display:"flex",gap:1,
-                       ".Mui-selected":{opacity:1}}}
+                  sx={{
+                    display: "flex",
+                    gap: 1,
+                    ".Mui-selected": { opacity: 1 },
+                  }}
                 >
-
-                    {item.attributes.img.data.map((img, index) => (
-                      // eslint-disable-next-line react/jsx-key
-                      <>
-                          <ToggleButton 
-                          value={index}
-                          aria-label="left aligned"
-                          sx={{width:"110px",
-                               height:"110px",
-                               padding:0,
-                               opacity:.6}}
-                         >
+                  {item.attributes.img.data.map((img, index) => (
+                    // eslint-disable-next-line react/jsx-key
+                    <>
+                      <ToggleButton
+                        value={index}
+                        aria-label="left aligned"
+                        sx={{
+                          width: "110px",
+                          height: "110px",
+                          padding: 0,
+                          opacity: 0.6,
+                        }}
+                      >
                         <img
                           src={`${img.attributes.url}`}
                           onClick={() => setIndexImg(index)}
@@ -131,9 +135,9 @@ function Modal({ open, handleClose, item }) {
                           width={"100%"}
                           height={"100%"}
                         />
-                    </ToggleButton>
-                      </>
-                    ))}
+                      </ToggleButton>
+                    </>
+                  ))}
                 </ToggleButtonGroup>
               </Stack>
 

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Modall from "./Modal";
 import { useTheme } from "@emotion/react";
 import {
@@ -19,7 +19,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { useGetProductByNameQuery } from "../../redux/product";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 function Main() {
   //data types
   const allProducts = "products?populate=*";
@@ -31,7 +31,7 @@ function Main() {
   const [oneItem, setOneItem] = useState({});
   const theme = useTheme();
   // @ts-ignore
-  const [alignment, setAlignment] = useState("left");
+  const [, setAlignment] = useState("left");
   // @ts-ignore
   const handleAlignment = (event, newProducts) => {
     if (newProducts !== null) {
@@ -67,7 +67,9 @@ function Main() {
         }}
       >
         <Typography variant="h6" color="red">
-          {error.error}
+          {error.
+// @ts-ignore
+          error}
         </Typography>
         <Typography variant="h6" color="red">
           Please Try Again
@@ -161,9 +163,9 @@ function Main() {
             <Card
               component={motion.div}
               layout
-              initial = {{scale:0}}
-              animate = {{scale:1}}
-              transition={{duration:1,type:"spring",stiffness:60}}
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 1, type: "spring", stiffness: 60 }}
               key={item.id}
               sx={{
                 maxWidth: 285,
