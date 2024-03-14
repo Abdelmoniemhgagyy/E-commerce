@@ -9,6 +9,7 @@ import Main from "./components/main/Main";
 import Footer from "./components/Footer";
 import ScrollTop from "./components/scrollToTop/ScrollTop";
 import { useEffect } from "react";
+import {motion} from "framer-motion"
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -31,18 +32,25 @@ function App() {
 // @ts-ignore
       theme={theme}>
          <CssBaseline />
-           <Header1/>
+         <Box component={motion.div}
+                initial={{ opacity: 0}}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1}}>
+
+           <Header1 />
            <Header2/>
            <Header3/>
-           <Box bgcolor={theme.
-// @ts-ignore
-           palette.bg.main}>
+           <Box 
+                bgcolor={theme.
+                  // @ts-ignore
+                  palette.bg.main}>
                 <Hero/>
                 <SectionIcons/>
                 <Main/>
            </Box>
            <Footer/>
            <ScrollTop/>
+                  </Box>
        </ThemeProvider >
       </ColorModeContext.Provider>
 
